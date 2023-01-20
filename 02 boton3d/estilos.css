@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(#eee 50%,#777 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#toggle{
+    display: none;
+}
+
+#boton{
+    display: block;
+    width: 200px;
+    height: 200px;
+    font-size: 75px;
+    background: #eee;
+    line-height: 200px;
+    text-align: center;
+    border-radius: 50%;
+    color: #777;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    margin: 0 auto;
+}
+
+#toggle:checked + #boton{
+    box-shadow: inset 0 12px 35px rgba(0,0,0,0.7);
+    color: green;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+.cajaLuces{
+    margin-top: 50px;
+    display: flex;
+    border-top: solid black;
+    justify-content: space-evenly;
+}
+
+.cajaLuz{
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    border:thin solid white;
+    transition: background-color .3s;
+}
+
+#toggle:checked ~ .cajaLuces .cajaLuz{
+    background-color: bisque;
+}
