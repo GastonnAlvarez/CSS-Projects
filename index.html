@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x: hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Borde animado</h1>
+    <div class="conteiner">Borde animado</div>
+
+    <div class="boton">Medio</div>
+
+    <div class="spinner"></div>
+    <br />
+
+    <br /><br /><br />
+    <br /><br /><br /><br /><br />
+    <div class="contenedor">
+      <div class="carta">
+        <div class="lado frente"></div>
+        <div class="lado atras">
+          <img src="./img/baki.jpg" alt="..." />
+        </div>
+      </div>
+    </div>
+
+    <p>Hola Mundo!</p>
+
+    <br /><br /><br /><br />
+    <hr />
+    <h2>Reloj</h2>
+    <div class="clock">00:00:00</div>
+    <hr />
+    <h2>Banner</h2>
+    <div class="banner"></div>
+    <hr />
+    <h2>Slider Automatico</h2>
+    <div class="slider">
+      <ul>
+        <li class="imgSlider"><img src="img/baki.jpg" alt="" /></li>
+        <li class="imgSlider"><img src="img/Captura.PNG" alt="" /></li>
+        <li class="imgSlider"><img src="img/japon.jpeg" alt="" /></li>
+        <li class="imgSlider"><img src="img/tomi.jpeg" alt="" /></li>
+      </ul>
+    </div>
+    <hr />
+    <h2>Boton Animado</h2>
+    <button class="btnAnim">
+      <span class="text">Submit</span>
+      <i class="icon"></i>
+    </button>
+    <button class="btnAnim2">
+      <span class="text2">Envio</span>
+    </button>
+    <hr />
+    <h2>Formulario</h2>
+    <form action="#" class="formulario">
+      <input type="text" name="texto" placeholder="Nombre" />
+      <input type="email" name="email" placeholder="Ingrese Gmail" />
+      <textarea
+        name=""
+        cols="30"
+        rows="10"
+        placeholder="Ingrese comentario"
+      ></textarea>
+      <input type="button" value="Enviar" id="boton" />
+    </form>
+    <hr />
+    <h2 class="modal-title" id="title-ga">
+      Galeria de Imagenes con efecto Ventana Modal
+    </h2>
+    <ul class="galeria">
+      <li>
+        <a href="#img1"><img src="img/baki.jpg" /></a>
+      </li>
+      <li>
+        <a href="#img2"><img src="img/Captura.PNG" /></a>
+      </li>
+      <li>
+        <a href="#img3"><img src="img/japon.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#img4"><img src="img/paradise.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#img5"><img src="img/tanke.jpeg" /></a>
+      </li>
+      <li>
+        <a href="#img6"><img src="img/tomi.jpeg" /></a>
+      </li>
+    </ul>
+
+    <div class="modal" id="img1">
+      <h3>Imagen Numero 1</h3>
+      <div class="imagen">
+        <a href="#img6">&#60;</a>
+        <a href="#img2"><img src="img/baki.jpg" /></a>
+        <a href="#img2">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>
+
+
+    <div class="modal" id="img2">
+      <h3>Imagen Numero 2</h3>
+      <div class="imagen">
+        <a href="#img1">&#60;</a>
+        <a href="#img3"><img src="img/Captura.PNG" /></a>
+        <a href="#img3">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>]
+
+    <div class="modal" id="img3">
+      <h3>Imagen Numero 3</h3>
+      <div class="imagen">
+        <a href="#img2">&#60;</a>
+        <a href="#img4"><img src="img/japon.jpeg" /></a>
+        <a href="#img4">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>
+
+    <div class="modal" id="img4">
+      <h3>Imagen Numero 4</h3>
+      <div class="imagen">
+        <a href="#img3">&#60;</a>
+        <a href="#img5"><img src="img/paradise.jpeg" /></a>
+        <a href="#img5">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>
+
+    <div class="modal" id="img5">
+      <h3>Imagen Numero 5</h3>
+      <div class="imagen">
+        <a href="#img4">&#60;</a>
+        <a href="#img6"><img src="img/tanke.jpeg" /></a>
+        <a href="#img6">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>
+
+    <div class="modal" id="img6">
+      <h3>Imagen Numero 6</h3>
+      <div class="imagen">
+        <a href="#img5">&#60;</a>
+        <a href="#img1"><img src="img/tomi.jpeg" /></a>
+        <a href="#img1">></a>
+      </div>
+      <a class="cerrar" href="#title-ga">X</a>
+    </div>
+
+    <hr>
+    <div class="imgStyle">
+      <div class="imgMove"></div>
+    </div>
+    <hr>
+    <div class="box"></div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script>
+      let clockElemento = document.querySelector(".clock");
+
+      setInterval(() => {
+        let now = new Date();
+
+        let hours = now.getHours().toString().padStart(2, "0"),
+          minutes = now.getMinutes().toString().padStart(2, "0"),
+          seconds = now.getSeconds().toString().padStart(2, "0");
+
+        let time = `${hours}:${minutes}:${seconds}`;
+
+        clockElemento.textContent = time;
+      }, 1000);
+    </script>
+  </body>
+</html>

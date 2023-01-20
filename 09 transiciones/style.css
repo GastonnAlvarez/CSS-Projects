@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: Arial;
+}
+
+figure {
+    height: 400px;
+    width: 300px;
+    background-image: linear-gradient(to top, #e12929, #053760);
+    position: relative;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2rem;
+}
+
+.buttons__item {
+    background-color: seagreen;
+    color: #fff;
+    text-decoration: none;
+    padding: 1.5rem 2rem;
+}
+
+img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -15%;
+    margin: auto;
+    width: 130%;
+    max-width: 400px;
+    transform: rotate(180deg) scale(0.2);
+    opacity: 0;
+    transition: opacity, transform 0.7s ease;
+}
+
+img[id]:target {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
